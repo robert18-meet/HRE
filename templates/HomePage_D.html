@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+  <head>
+    <title>Super Guitar Hero Chords</title>
+    <!--include headers-->
+    <!-- #include Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--finish #include Bootstrap-->
+    <!--#include CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='StyleSheet.css') }}">
+    <!--finish #include CSS-->
+    <!--finish include headers-->
+  </head>
+
+  <body>
+    <!--Start-->
+    <div class = "container" >
+    <!--Starting Bar-->
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="{{url_for('homepage')}}">Super Hero Guitar Hero</a>
+        </div>
+      </div>
+    </nav>
+    <!--Finishing Bar-->
+    <br><br><br>
+    <h3>Hello there, {{nick}}</h3>
+    <br>
+    <a href="/" class="btn btn-default" role="button">Log Out</a>
+    <h3>Put URL of chords to insert it</h3>
+    <form class="form-horizontal" action= "{{ url_for('LoggedIn') }}" method="post">
+    <div class="col-sm-3">
+    <input type="text" class="form-control" id="URL" placeholder="URL" name="URL">
+    </div>
+    <br><br><br>
+    <div class="col-sm-3">
+    <input type="text" class="form-control" id="Name" placeholder="Name" name="Name">
+    </div>
+    <button type="submit" class="btn btn-default">Post</button>
+    </form>
+
+  <!--Starting Options-->
+  <div class = "menu-pos">
+  <a href="{{url_for('Songs')}}" class="btn btn-default" role="button">Songs</a>
+  </div>
+  <div class = "minigame">
+  <a href="{{url_for('Minigame')}}" class="btn btn-default" role="button">Minigame</a>
+  </div>
+  <!--Finishing Options-->
+  <!--Starting menu buttons and explanations about it-->
+  <div class = "explanation">
+  <h3>SuperGuitarHeroChords presents two main fearures!</h3>
+  <br>
+  </div>
+  <div class = "explanationException">
+  <p>In here you can find all the songs that exists in this site! ( ͡° ͜ʖ ͡°)</p>
+  <p><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<</p>
+  <br>
+  <p>In here you can play a minigame. You can use it as a practice tool!</p>
+  <p>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></p>
+  </div>
+  <!--Finishing our vision paragraph-->
+  <!--Copyrights-->
+  <div class = "cp">
+  <p>Robert Kostrov - Josh Gaming - Inc.</p>
+  </div>
+  <!--Finishing copyrights-->
+  <!--Container ends here! don't code after it.-->  
+  </div>
+    <!--End-->
+  </body>
